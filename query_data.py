@@ -8,6 +8,7 @@ from get_embedding_function import get_embedding_function
 
 CHROMA_PATH = "chroma"
 
+# Paste GROQ_API_KEY
 os.environ["GROQ_API_KEY"] = "gsk_pasteyourapikey"
 
 PROMPT_TEMPLATE = """
