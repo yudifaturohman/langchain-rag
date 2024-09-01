@@ -3,5 +3,6 @@ langchain
 langchain_community
 langchain-huggingface
 langchain-groq
+chromadb
 pytest
 boto3
