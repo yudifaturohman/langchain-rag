@@ -33,7 +33,9 @@ def query_rag(query_text: str):
     prompt = prompt_template.format(context=context_text, question=query_text)
 
     model = ChatGroq(model='mixtral-8x7b-32768')
-    response_text = model.invoke(prompt)
+    response = model.invoke(prompt)
+
+    response_text = str(response.content) if hasattr(response, 'content') else str(response)
 
     sources = [doc.metadata.get("id", None) for doc, _score in results]
     formatted_response = {
